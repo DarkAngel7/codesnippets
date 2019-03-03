@@ -27,7 +27,8 @@ function moveFileTemplatesToXcodeFileTemplatesFolder {
 
     # 系统文件夹授权
     sudo chmod 777 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File\ Templates/
-    mkdir Custom && cd Custom
+    mkDirAbsolutely Custom
+    cd Custom
     
     # 再切换到当前脚本所在的文件夹下
     cd $basepath
@@ -51,7 +52,7 @@ function syncXcodesnippetsAndFileTemplatesFromOnlinestorage {
     #3
     downloadCodesnippetsFromGit git@github.com:FantasticLBP/codesnippets.git
     #4
-    cd xqiossnippets
+    cd codesnippets
     #5
     moveCodeSnippetsToXcodeSnippetsFolder
     #6

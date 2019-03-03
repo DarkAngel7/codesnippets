@@ -437,27 +437,27 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 
 我们观察系统文件模版的特点，和在 Xcode 新建文件模版对应。
 
-![Xcode file template存放地址](/Users/liubinpeng/Desktop/20190304_filetemplates.png)
+![Xcode file template存放地址](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplates.png)
 
 
 
 所以我们新建 Custom 文件夹，将系统 Source 文件夹下面的 Cocoa Touch Class.xctemplate 复制到 Custom 文件夹下。重命名为我们需要的名字，我这里以“Power”为例
 
-![自定义文件模版示例](/Users/liubinpeng/Desktop/20190304_filetemplateSelf.png)
+![自定义文件模版示例](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplateSelf.png)
 
 进入 PowerViewController.xctemplate/PowerViewControllerObjective-C
 
 修改 `___FILEBASENAME___.h` 和 `___FILEBASENAME___.m` 文件内容
 
-![注意点1](./../assets/20190304-fileTmplates3.png)
+![注意点1](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304-fileTmplates3.png)
 
 在替换 .h 文件内容的时候后面改为 UIViewController，不然其他开发者新建文件模版的时候出现的不是 UIViewController 而是我们的 PowerViewController 
 
-![.m文件内容](./../assets/20190304_filetemplates4.png)
+![.m文件内容](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplates4.png)
 
 修改 TemplateInfo.plist
 
-![plist注意点](./../assets/20190304_filetemplate5.png)
+![plist注意点](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplate5.png)
 
 
 
@@ -467,7 +467,7 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 
   商量好一个标识（“Power”）。比如我新建了单例、控制器、Model、UIView4个模版，都以为 Power 开头。
 
-  ![模版用法](./../assets/20190304_filetemplate6.png)
+  ![模版用法](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplate6.png)
 
 - 如何共享
 
@@ -476,6 +476,15 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
   1. git clone 代码到脚本所在文件夹
   2. 进入存放 codesnippets 的文件夹将内容复制到系统存放 codesnippets 的地方
   3. 进入存放 file template 的文件夹将内容复制到系统存放 file template 的地方
+
+
+## 使用
+
+```shell
+./syncSnippets.sh // 同步git云端代码块和文件模版到本地
+./uploadMySnippets.sh //将本地的代码块和文件模版同步到云端
+```
+
 
 
 
