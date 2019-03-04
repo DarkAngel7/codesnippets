@@ -1,6 +1,6 @@
 # iOS 工程规范
 
-> 最近在对接项目，看到项目中存在一些命名和方法分块方面存在一些问题，结合平时经验和 [Apple官方代码规范](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html) 在此整理出 iOS 工程规范。提出第一个版本，如果后期觉得有不完善的地方，继续提出来不断完善，文档在此记录的目的就是为了大家的代码可读性较好，后来的人或者团队里面的其他人看到代码可以不会因为代码风格和可读性上面造成较大时间的开销。
+> 最近重构项目组件，看到项目中存在一些命名和方法分块方面存在一些问题，结合平时经验和 [Apple官方代码规范](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html) 在此整理出 iOS 工程规范。提出第一个版本，如果后期觉得有不完善的地方，继续提出来不断完善，文档在此记录的目的就是为了大家的代码可读性较好，后来的人或者团队里面的其他人看到代码可以不会因为代码风格和可读性上面造成较大时间的开销。
 
     软件的生命周期贯穿产品的开发，测试，生产，用户使用，版本升级和后期维护等过程，只有易读，易维护的软件代码才具有生命力。
 
