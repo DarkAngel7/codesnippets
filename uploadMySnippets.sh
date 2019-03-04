@@ -19,7 +19,9 @@ function printStep {
   echo $COLOR_SUCC"### 执行操作【$1】###"$COLOR_END
 }
 
-# 将本地的Xcode代码模版和自定义的几个类文件模版同步到云端
+:<<*
+将本地的Xcode代码模版和自定义的几个类文件模版同步到云端
+*
 function uploadLocalCodeSnippetsAndFileTemplates {
     # 文件夹授权
     chmod 775 ~/Library/Developer/Xcode/UserData/CodeSnippets/

@@ -42,8 +42,11 @@ function deleteTheFolderAbsolutely {
     rm -fr $1 
 }
 
-# 从云端同步 codesnippets 到 Xcode 的 codesnippets 文件夹
-# 从云端同步 File Templates 到 Xcode 的 File Templates 文件夹
+:<<EOF
+从云端同步 codesnippets 到 Xcode 的 codesnippets 文件夹
+从云端同步 File Templates 到 Xcode 的 File Templates 文件夹
+EOF
+
 function syncXcodesnippetsAndFileTemplatesFromOnlinestorage {
     #1
     mkDirAbsolutely CodeSinppetsAndFileTemplates
