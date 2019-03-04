@@ -1,5 +1,3 @@
-# iOS 工程规范
-
 > 最近重构项目组件，看到项目中存在一些命名和方法分块方面存在一些问题，结合平时经验和 [Apple官方代码规范](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html) 在此整理出 iOS 工程规范。提出第一个版本，如果后期觉得有不完善的地方，继续提出来不断完善，文档在此记录的目的就是为了大家的代码可读性较好，后来的人或者团队里面的其他人看到代码可以不会因为代码风格和可读性上面造成较大时间的开销。
 
     软件的生命周期贯穿产品的开发，测试，生产，用户使用，版本升级和后期维护等过程，只有易读，易维护的软件代码才具有生命力。
@@ -14,7 +12,7 @@
 5. 在方法内部不要重复计算某个值，适当的情况下可以将计算结果缓存起来
 6. 尽量减少单例的使用。
 7. 提供一个统一的数据管理入口，不管是 MVC、MVVM、MVP 模块内提供一个统一的数据管理入口会使得代码变得更容易管理和维护。
-8. 除了 .m 文件中方法，其他的地方"{" 不需要另起一行。
+8. 除了 .m 文件中方法，其他的地方"{"不需要另起一行。
 ```Objective-c
 - (void)getGooodsList
 {
@@ -437,27 +435,27 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 
 我们观察系统文件模版的特点，和在 Xcode 新建文件模版对应。
 
-![Xcode file template存放地址](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplates.png)
+![Xcode file template存放地址](https://user-gold-cdn.xitu.io/2019/3/4/169464d6a8f49c96?w=2568&h=1232&f=png&s=521852)
 
 
 
 所以我们新建 Custom 文件夹，将系统 Source 文件夹下面的 Cocoa Touch Class.xctemplate 复制到 Custom 文件夹下。重命名为我们需要的名字，我这里以“Power”为例
 
-![自定义文件模版示例](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplateSelf.png)
+![自定义文件模版示例](https://user-gold-cdn.xitu.io/2019/3/4/169464d6ac930d56?w=2364&h=788&f=png&s=247943)
 
 进入 PowerViewController.xctemplate/PowerViewControllerObjective-C
 
 修改 `___FILEBASENAME___.h` 和 `___FILEBASENAME___.m` 文件内容
 
-![注意点1](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304-fileTmplates3.png)
+![注意点1](https://user-gold-cdn.xitu.io/2019/3/4/169464d6ac87e6fb?w=1818&h=1288&f=png&s=747849)
 
 在替换 .h 文件内容的时候后面改为 UIViewController，不然其他开发者新建文件模版的时候出现的不是 UIViewController 而是我们的 PowerViewController 
 
-![.m文件内容](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplates4.png)
+![.m文件内容](https://user-gold-cdn.xitu.io/2019/3/4/169464d6ade6fb38?w=2254&h=1744&f=png&s=1133114)
 
 修改 TemplateInfo.plist
 
-![plist注意点](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplate5.png)
+![plist注意点](https://user-gold-cdn.xitu.io/2019/3/4/169464d6ae034a9e?w=1600&h=1544&f=png&s=350729)
 
 
 
@@ -467,7 +465,7 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 
   商量好一个标识（“Power”）。比如我新建了单例、控制器、Model、UIView4个模版，都以为 Power 开头。
 
-  ![模版用法](https://raw.githubusercontent.com/FantasticLBP/knowledge-kit/master/assets/20190304_filetemplate6.png)
+  ![模版用法](https://user-gold-cdn.xitu.io/2019/3/4/169464d6acb03753?w=1460&h=1052&f=png&s=235389)
 
 - 如何共享
 
@@ -489,5 +487,7 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 
 
 ## PS
+
+目前新建了大概30个代码段和4个类文件模版（UIViewController控制器带有方法组、模型、线程安全的单例模版、带有布局方法的UIView模版）
 
 shell 脚本基本有每个函数和关键步骤的代码注释，想学习 shell 的人可以看看代码。[代码传送门](https://github.com/FantasticLBP/codesnippets)
