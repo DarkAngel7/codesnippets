@@ -57,14 +57,16 @@ function syncXcodesnippetsAndFileTemplatesFromOnlinestorage {
     #4
     cd codesnippets
     #5
-    moveCodeSnippetsToXcodeSnippetsFolder
+    mkDirAbsolutely ~/Library/Developer/Xcode/UserData/CodeSnippets/
     #6
-    moveFileTemplatesToXcodeFileTemplatesFolder
+    moveCodeSnippetsToXcodeSnippetsFolder
     #7
-    cd ..
+    moveFileTemplatesToXcodeFileTemplatesFolder
     #8
     cd ..
     #9
+    cd ..
+    #10
     deleteTheFolderAbsolutely CodeSinppetsAndFileTemplates
 }
 
