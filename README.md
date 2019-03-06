@@ -479,6 +479,8 @@ Xcode 文件模版的存放地址：/Applications/Xcode.app/Contents/Developer/P
 ## 使用
 
 ```shell
+chmod +x ./syncSnippets.sh // 为脚本设置可执行权限
+chmod +x ./uploadMySnippets.sh // 为脚本设置可执行权限
 ./syncSnippets.sh // 同步git云端代码块和文件模版到本地
 ./uploadMySnippets.sh //将本地的代码块和文件模版同步到云端
 ```
